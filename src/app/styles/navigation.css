@@ -24,13 +24,12 @@
 
 .sidebar__link.is-active {
   color: #1f2f42;
-  background: #2AD2F9;
   font-weight: bold;
 }
 
 .sidebar__link:hover:not(.is-active) {
-  border-color: #c9dff5;
-  box-shadow: 0 8px 18px rgba(22, 146, 208, 0.1);
+  /* border-color: #c9dff5; */
+  /* box-shadow: 0 8px 18px rgba(22, 146, 208, 0.1); */
 }
 
 .sidebar__icon {

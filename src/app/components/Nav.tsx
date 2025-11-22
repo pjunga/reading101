@@ -35,8 +35,8 @@ export function Nav() {
               <Image
                 src={iconSrcMap[item.icon]}
                 alt={`${item.label} icon`}
-                width={18}
-                height={18}
+                width={36}
+                height={36}
                 sizes="32px"
               />
             </span>
