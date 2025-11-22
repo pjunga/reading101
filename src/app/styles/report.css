@@ -1,0 +1,190 @@
+/* ============================================
+   REPORT PAGE STYLES
+   리포트 페이지 관련 스타일 (결과 그리드, 월간 결과, 등급 등)
+   ============================================ */
+
+/* Results Page Layout */
+.results-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Results Header */
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff3dc;
+  border: 1px solid #eedbb9;
+  border-radius: 14px;
+  padding: 10px 14px;
+}
+
+.results-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.results-title h1 {
+  font-size: 18px;
+}
+
+.results-icon {
+  font-size: 18px;
+}
+
+.results-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: #2a3a52;
+}
+
+.date-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2f87d7;
+  box-shadow: 0 0 0 4px rgba(47, 135, 215, 0.2);
+}
+
+/* Results Panel */
+.results-panel {
+  background: #fff3dc;
+  border: 1px solid #eedbb9;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 12px 28px rgba(129, 90, 0, 0.05);
+  max-height: calc(100vh - 160px);
+  overflow: hidden;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  padding-right: 4px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* Result Card */
+.result-card {
+  background: #fff;
+  border: 1px solid #e3d8c2;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.result-cover {
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  color: #1f2f42;
+}
+
+.cover-accent {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+.cover-title {
+  position: relative;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.result-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-title {
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #1f2f42;
+}
+
+.result-stats {
+  display: grid;
+  gap: 6px;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #566375;
+}
+
+.result-row strong {
+  color: #2d3142;
+}
+
+/* Text Colors */
+.text-blue {
+  color: #2f87d7;
+}
+
+.text-green {
+  color: #2f9e44;
+}
+
+.text-orange {
+  color: #e0a700;
+}
+
+.text-red {
+  color: #d62424;
+}
+
+/* Grade Pills */
+.grade-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+}
+
+.grade-A {
+  background: #2f87d7;
+}
+
+.grade-B {
+  background: #2f9e44;
+}
+
+.grade-C {
+  background: #e0a700;
+}
+
+.grade-D {
+  background: #d62424;
+}

@@ -1,0 +1,161 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS (모바일 우선)
+   ============================================ */
+
+/* 기본 스타일: 모바일 (< 1024px) */
+.sidebar {
+  display: none;
+}
+
+.app-shell {
+  padding: 16px;
+  padding-bottom: 80px; /* 하단 탭바 공간 확보 */
+}
+
+.hero-card {
+  grid-template-columns: 1fr;
+  padding: 12px;
+}
+
+.hero-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.content-layout {
+  grid-template-columns: 1fr;
+}
+
+/* 모바일 타이포그래피 */
+.hero-name {
+  font-size: 16px;
+}
+
+.section-heading h3 {
+  font-size: 15px;
+}
+
+.brand-logo-img {
+  width: 100px;
+}
+
+.book-card__cover {
+  width: 90px;
+  min-width: 90px;
+}
+
+.stat-chip {
+  font-size: 14px;
+}
+
+.stat-chip strong {
+  font-size: 14px;
+}
+
+/* 작은 태블릿 이상 (>= 640px) */
+@media (min-width: 640px) {
+  .hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .book-card__meta {
+    grid-template-columns: repeat(5, minmax(0, auto));
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .hero-name {
+    font-size: 17px;
+  }
+
+  .section-heading h3 {
+    font-size: 16px;
+  }
+
+  .book-card__cover {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .stat-chip {
+    font-size: 15px;
+  }
+
+  .stat-chip strong {
+    font-size: 15px;
+  }
+}
+
+/* 중형 태블릿 (>= 900px) */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* 데스크탑 이상 (>= 1024px) */
+@media (min-width: 1024px) {
+  .bottom-nav {
+    display: none;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    background: linear-gradient(180deg, #fefefe 0%, #e8f7ff 100%);
+    padding: 14px 12px;
+  }
+
+  .app-shell {
+    flex-direction: row;
+    padding: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-card {
+    grid-template-columns: 1.1fr 1.8fr 1fr;
+    padding: 16px;
+  }
+
+  .content-layout {
+    grid-template-columns: 1.8fr 0.9fr;
+  }
+
+  .main-surface {
+    padding: 30px;
+  }
+
+  .brand-logo-img {
+    width: 120px;
+  }
+
+  .hero-name {
+    font-size: 18px;
+  }
+
+  .section-heading h3 {
+    font-size: 17px;
+  }
+
+  .book-card__cover {
+    width: 110px;
+    min-width: 110px;
+  }
+
+  .stat-chip {
+    font-size: 16px;
+  }
+
+  .stat-chip strong {
+    font-size: 16px;
+  }
+}
+
+/* 큰 데스크탑 (>= 1200px) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}

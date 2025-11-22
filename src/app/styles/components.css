@@ -1,0 +1,389 @@
+/* ============================================
+   COMMON COMPONENTS
+   공통 컴포넌트 스타일 (섹션 카드, 버튼, 그리드, 빈 상태 등)
+   ============================================ */
+
+/* Content Layout */
+.content-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Section Cards */
+.section-card {
+  background: var(--panel);
+  border: 1px solid #eedbb9;
+  border-radius: 16px;
+  padding: 14px 14px 18px;
+  box-shadow: 0 12px 28px rgba(129, 90, 0, 0.05);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.section-heading h3 {
+  font-size: 17px;
+}
+
+.section-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f9e3b3;
+}
+
+.pill-btn {
+  margin-left: auto;
+  background: #f4f0e7;
+  color: #6a5c3b;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Section (Alternative Card) */
+.section {
+  background: var(--panel);
+  border: 1px solid #eedbb9;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 28px rgba(129, 90, 0, 0.05);
+}
+
+.section__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section__title h2 {
+  font-size: 18px;
+}
+
+.section__meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Panel */
+.panel {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #f1e5cf;
+  padding: 28px;
+  min-height: 220px;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.card__title {
+  font-weight: 800;
+  font-size: 15px;
+  color: #1f2f42;
+}
+
+.card__desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Empty State */
+.empty-state {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty-emoji {
+  font-size: 28px;
+}
+
+.empty-title {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.empty-text {
+  font-size: 13px;
+}
+
+.empty {
+  padding: 16px;
+  border-radius: 12px;
+  background: #f6fbff;
+  border: 1px dashed #c3d7ef;
+  color: var(--muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #1a92d0;
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  transition: all 0.15s ease;
+}
+
+.btn--ghost {
+  background: #f6fbff;
+  color: #1f2f42;
+}
+
+.btn--accent {
+  background: linear-gradient(135deg, #ffb64d, #ffdb92);
+  color: #1f1f1f;
+  border-color: #f7c36e;
+  box-shadow: 0 6px 20px rgba(255, 182, 77, 0.35);
+}
+
+/* Chips & Tags */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #f2f6fb;
+  color: #355577;
+  font-size: 12px;
+  border: 1px solid #dbe6f3;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  border: 1px solid var(--border);
+  background: #fdf7ec;
+}
+
+.tag--ok {
+  background: #e8f8ed;
+  color: #2f8c4b;
+  border-color: #bfe0c5;
+}
+
+.tag--warn {
+  background: #fff4dc;
+  color: #d98417;
+  border-color: #f2d299;
+}
+
+.tag--info {
+  background: #e7f4ff;
+  color: #2678c2;
+  border-color: #c5e0ff;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.label-blue {
+  background: #2f8ee5;
+  color: #fff;
+}
+
+/* Stats Row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.stat {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fffdf6;
+}
+
+.stat strong {
+  display: block;
+  font-size: 22px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Flow Steps */
+.flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.flow__step {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.flow__step h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.flow__step p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Lists */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.list__row span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.pillset {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Chart Bar */
+.chart-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.chart-bar__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a92d0, #ffb64d);
+}
+
+/* Stacked Layout */
+.stacked {
+  display: grid;
+  gap: 12px;
+}
+
+/* Forms */
+.input-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input {
+  background: #fff;
+  color: #1f2f42;
+  border: 1px solid #d8e6f4;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.input::placeholder {
+  color: #8aa1b8;
+}
+
+/* Typography */
+.subheading {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Badges */
+.badge-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.badge {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px dashed #c3d7ef;
+  background: #f6fbff;
+  text-align: center;
+  font-weight: 700;
+  color: #3b5574;
+}

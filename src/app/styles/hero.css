@@ -1,0 +1,134 @@
+/* ============================================
+   HERO SECTION STYLES
+   히어로 섹션 관련 스타일 (프로필, 통계, 진행 상태)
+   ============================================ */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Hero Card Container */
+.hero-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  background: linear-gradient(135deg, #218ece, #1a6dc7);
+  color: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(0, 69, 133, 0.18);
+  align-items: center;
+}
+
+/* Profile Section */
+.hero-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-bubble {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffe38f, #ffb64d);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  color: #2c2c2c;
+}
+
+.hero-name {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.hero-level {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Stats Grid */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 2px 6px;
+  align-items: center;
+}
+
+.stat-icon {
+  grid-row: span 2;
+  font-size: 16px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.stat-chip strong {
+  font-size: 16px;
+}
+
+/* Progress Section */
+.hero-progress {
+  justify-self: end;
+  width: 100%;
+  max-width: 280px;
+}
+
+.progress-title {
+  font-weight: 800;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.progress-track {
+  position: relative;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.progress-fill {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: linear-gradient(90deg, #ffe38f, #ffb64d);
+}
+
+.progress-value {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
+}
+
+.badge-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+}

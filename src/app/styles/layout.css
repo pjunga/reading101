@@ -1,0 +1,75 @@
+/* ============================================
+   LAYOUT STRUCTURE
+   ============================================ */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar {
+  display: none; /* 모바일에서는 숨김, 태블릿 이상에서 표시 */
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo-img {
+  width: 120px;
+  height: auto;
+  margin: 15px 0;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  position: relative;
+}
+
+.brand-mark__roof {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ffb64d, #f0842d);
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0 38%);
+  border-radius: 8px;
+}
+
+.brand-mark__body {
+  position: absolute;
+  inset: 45% 14% 8% 14%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 15px;
+  color: #1a92d0;
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.main-surface {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.surface-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}

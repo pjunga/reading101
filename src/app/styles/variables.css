@@ -1,0 +1,42 @@
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+
+:root {
+  --bg: #8ee0df;
+  --bg-2: #4fa8db;
+  --panel: #fff3dc;
+  --card: #ffffff;
+  --ink: #243345;
+  --muted: #5d6b7d;
+  --border: #e3d8c2;
+  --accent: #1a92d0;
+  --accent-strong: #ffb64d;
+  --accent-soft: #c8e4ff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--ink);
+  background: url("/bg.png") center top / cover no-repeat fixed;
+  font-family: var(--font-geist-sans), "Pretendard", "Inter", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
