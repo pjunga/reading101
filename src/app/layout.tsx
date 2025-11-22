@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import { Nav } from "./components/Nav";
+import { BottomNav } from "./components/BottomNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
             </div>
           </aside>
           <main className="main-surface">{children}</main>
+          <BottomNav />
         </div>
       </body>
     </html>

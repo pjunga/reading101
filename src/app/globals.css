@@ -40,14 +40,13 @@ a {
 .app-shell {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
 }
 
 .sidebar {
-  width: 130px;
-  background: linear-gradient(180deg, #fefefe 0%, #e8f7ff 100%);
-  padding: 14px 12px;
+  display: none; /* 모바일에서는 숨김, 태블릿 이상에서 표시 */
 }
 
 .sidebar__brand {
@@ -176,7 +175,7 @@ a {
 
 .main-surface {
   flex: 1;
-  padding: 30px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -190,7 +189,7 @@ a {
 
 .hero-card {
   display: grid;
-  grid-template-columns: 1.1fr 1.8fr 1fr;
+  grid-template-columns: 1fr;
   gap: 14px;
   background: linear-gradient(135deg, #218ece, #1a6dc7);
   color: #fff;
@@ -236,7 +235,7 @@ a {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -310,7 +309,7 @@ a {
 
 .content-layout {
   display: grid;
-  grid-template-columns: 1.8fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 14px;
   align-items: start;
 }
@@ -490,7 +489,7 @@ a {
 
 .book-card__meta {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, auto));
+  grid-template-columns: repeat(3, minmax(0, auto));
   align-items: center;
   gap: 8px;
   color: #4c5869;
@@ -560,7 +559,7 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 12px;
 }
 
@@ -988,30 +987,219 @@ a {
   background: #d62424;
 }
 
-@media (max-width: 1024px) {
-  .app-shell {
-    flex-direction: column;
-  }
+/* ============================================
+   BOTTOM NAVIGATION (모바일 전용)
+   ============================================ */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #fefefe 0%, #e8f7ff 100%);
+  border-top: 1px solid var(--border);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  z-index: 100;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
 
-  .hero-card {
-    grid-template-columns: 1fr;
-  }
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 12px;
+  min-width: 60px;
+  position: relative;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
 
+.bottom-nav__item.is-active {
+  color: var(--accent);
+}
+
+.bottom-nav__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav__item.is-active .bottom-nav__icon {
+  transform: scale(1.1);
+}
+
+.bottom-nav__label {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS (모바일 우선)
+   ============================================ */
+
+/* 기본 스타일: 모바일 (< 768px) */
+.sidebar {
+  display: none;
+}
+
+.app-shell {
+  padding: 16px;
+  padding-bottom: 80px; /* 하단 탭바 공간 확보 */
+}
+
+.hero-card {
+  grid-template-columns: 1fr;
+  padding: 12px;
+}
+
+.hero-stats {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.content-layout {
+  grid-template-columns: 1fr;
+}
+
+/* 모바일 타이포그래피 */
+.hero-name {
+  font-size: 16px;
+}
+
+.section-heading h3 {
+  font-size: 15px;
+}
+
+.brand-logo-img {
+  width: 100px;
+}
+
+.book-card__cover {
+  width: 90px;
+  min-width: 90px;
+}
+
+.stat-chip {
+  font-size: 14px;
+}
+
+.stat-chip strong {
+  font-size: 14px;
+}
+
+/* 작은 태블릿 이상 (>= 640px) */
+@media (min-width: 640px) {
   .hero-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .content-layout {
-    grid-template-columns: 1fr;
+  .book-card__meta {
+    grid-template-columns: repeat(5, minmax(0, auto));
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .hero-name {
+    font-size: 17px;
+  }
+
+  .section-heading h3 {
+    font-size: 16px;
+  }
+
+  .book-card__cover {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .stat-chip {
+    font-size: 15px;
+  }
+
+  .stat-chip strong {
+    font-size: 15px;
   }
 }
 
-@media (max-width: 768px) {
-  .sidebar {
+/* 중형 태블릿 (>= 900px) */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* 데스크탑 이상 (>= 1024px) */
+@media (min-width: 1024px) {
+  .bottom-nav {
     display: none;
   }
 
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    background: linear-gradient(180deg, #fefefe 0%, #e8f7ff 100%);
+    padding: 14px 12px;
+  }
+
   .app-shell {
+    flex-direction: row;
+    padding: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-card {
+    grid-template-columns: 1.1fr 1.8fr 1fr;
     padding: 16px;
+  }
+
+  .content-layout {
+    grid-template-columns: 1.8fr 0.9fr;
+  }
+
+  .main-surface {
+    padding: 30px;
+  }
+
+  .brand-logo-img {
+    width: 120px;
+  }
+
+  .hero-name {
+    font-size: 18px;
+  }
+
+  .section-heading h3 {
+    font-size: 17px;
+  }
+
+  .book-card__cover {
+    width: 110px;
+    min-width: 110px;
+  }
+
+  .stat-chip {
+    font-size: 16px;
+  }
+
+  .stat-chip strong {
+    font-size: 16px;
+  }
+}
+
+/* 큰 데스크탑 (>= 1200px) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
