@@ -9,7 +9,6 @@ const navItems = [
   { href: "/reading", label: "READING", icon: "reading" },
   { href: "/report", label: "REPORT", icon: "report" },
   { href: "/profile", label: "Achievements", icon: "status" },
-  { href: "/completed", label: "COMPLETED", icon: "completed" },
 ];
 
 const iconSrcMap: Record<string, string> = {
@@ -17,7 +16,6 @@ const iconSrcMap: Record<string, string> = {
   reading: "/icon_reading.png",
   report: "/icon_report.png",
   status: "/icon_status.png",
-  completed: "/icon_status.png", // 임시로 status 아이콘 사용
 };
 
 export function BottomNav() {
